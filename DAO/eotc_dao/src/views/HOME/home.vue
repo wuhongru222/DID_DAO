@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="home">
     <header>
-    <van-row>
-  <van-col span="8">span: 8</van-col>
-  <van-col span="8">span: 8</van-col>
-  <van-col span="8">span: 8</van-col>
+    <van-row class="header">
+  <van-col span="8"><van-icon name="bars" color="white" /></van-col>
+  <van-col span="8"><img src="./assets/image/eotc.png" alt=""></van-col>
+  <van-col span="8" ><van-icon name="manager-o"  color="white"/></van-col>
 </van-row>
     </header>
     <main></main>
@@ -23,6 +23,14 @@ name:'home',
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .home{
+    background: #070A0E;
+    height: 100vh;
+    width: 100%;
+  }
+  .header{
+    display: flex;
 
+  }
 </style>
