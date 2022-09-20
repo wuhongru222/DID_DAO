@@ -1,0 +1,160 @@
+html{
+    color: white;
+}
+.main1 {
+
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main2 {
+
+    width: 100vw;
+    height: 40vh;
+}
+
+.vanpopup1 {
+    .van-popup--left {
+        top: 55%
+    }
+
+    .uls1 {
+        display: flex;
+        flex-direction: column;
+        height: 95vh;
+
+        li {
+            padding-left: 10%;
+            background: #000000;
+            height: (95vh/11);
+            line-height: (95vh/11);
+
+            .van-icon {
+                float: right;
+                line-height: (95vh/11);
+                margin-right: 15vw;
+            }
+        }
+
+    }
+}
+
+.imgs2 {
+
+    width: 100vw;
+    text-align: center;
+    height: 20vh;
+    line-height: 20vh;
+
+    .van-image__error,
+    .van-image__img,
+    .van-image__loading {
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+.h2 {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    color: white;
+}
+
+.vancol5 {
+    display: flex;
+    justify-content: center;
+
+    .pp1 {
+        width: 80%;
+        text-align: center;
+        color: white;
+    }
+}
+
+.vanhh {
+
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newtian {
+    margin-top: 5%;
+
+    width: 100%;
+    height: 8%;
+    color: white;
+    font-size: 0.12em;
+}
+.chuangkou{
+    color: white;
+    width: 100%;
+    height: 67%;
+    font-size: 0.12em;
+    p{
+        font-size: 0.20em;
+        
+    }
+  ul{
+    height: 100%;
+    li{
+        
+        border: 0.5px solid gold;
+        height: 34%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .row3{
+            padding-top: 3%;
+            
+        }
+    }
+  }
+}
+.dibu2{
+  
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.12em;
+    .pp1{
+        color: white;
+        text-align: center;
+        
+    }
+}
+.foot{
+
+    width: 100%;
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+    .span22{
+        height: 100%;
+        
+
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+ 
+}
+.van-ellipsis{
+color: white;
+
+}
+.van-dropdown-menu__item{
+background: black;
+}
