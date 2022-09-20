@@ -1,0 +1,75 @@
+
+.main1{
+   
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+ 
+}
+.main2{
+  
+    width: 100vw;
+    height: 40vh;
+}
+.vanpopup1{
+    .van-popup--left{
+        top:55%
+        }
+        .uls1{
+            display: flex;
+            flex-direction: column;
+            height: 95vh;
+            li{
+   
+               height: (95vh/11); 
+               line-height:(95vh/11) ;
+               .van-icon {
+                float: right;
+                line-height:(95vh/11) ;
+                margin-right: 15vw;
+               }
+            }
+            
+        }
+}
+.imgs2{
+   
+    width: 100vw;
+    text-align: center;
+    height: 20vh;
+    line-height: 20vh;
+    .van-image__error, .van-image__img, .van-image__loading{
+        vertical-align:middle;display:inline-block;
+    }
+}
+
+.h2{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    color: white;
+}
+.vancol5{
+ display: flex;
+ justify-content: center;
+    .pp1{
+        width: 80%;
+        text-align: center;
+        color: white;
+    }
+}
+.vanhh{
+  
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newtian{
+    background: darkcyan;
+    width: 100%;
+    height: 5%;
+}
