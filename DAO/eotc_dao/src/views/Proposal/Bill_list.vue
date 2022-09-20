@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <header>
+  <div class="meun">
+    <header class="me">
       <van-nav-bar :border="false" title="我的提案" left-arrow />
-      <div class="bj"></div>
-      <!-- <van-panel title="将UNI提案提交门槛降低至2万"> </van-panel> -->
-      <div>
+      <div class="box">
         <div class="one_an" @click="detail">
           <div>将UNI提案提交门槛降低至2万</div>
           <div class="piao">
@@ -77,43 +75,52 @@ export default {
   .van-icon {
     color: #000;
   }
+  .van-nav-bar__title {
+    color: #000;
+  }
 }
-.bj {
+.me {
   background: #f3f4f5;
-  height: 10pt;
+  height: 100vh;
+}
+.box {
+  background: #fff;
+  border-radius: 0.5rem;
+  height: 100vh;
 }
 .one_an {
-  margin: 16px;
+  color: #000;
+  margin: 1rem;
   border-bottom: 1px solid #eeeeee;
-  line-height: 25pt;
-  font-size: 16px;
+  line-height: 2rem;
+  font-size: 1rem;
   .piao {
     display: flex;
-    color: #9296a2;
-    font-size: 14px;
+    /* color: #9296a2; */
+    font-size: 0.8rem;
     justify-content: space-between;
     .ion {
       display: inline-block;
-      width: 7pt;
-      height: 7pt;
+      width: 0.5rem;
+      height: 0.5rem;
       border-radius: 50%;
       background: #fc7542;
     }
     .ion1 {
       display: inline-block;
-      width: 7pt;
-      height: 7pt;
+      width: 0.5rem;
+      height: 0.5rem;
       border-radius: 50%;
       background: #00b87a;
     }
   }
 }
 .van-button {
-  width: 345px;
+  width: 22rem;
   position: fixed;
-  margin-left: 16px;
-  bottom: 30px;
-  border-radius: 25px;
+  margin-left: 1.1rem;
+  bottom: 2rem;
+  border-radius: 10rem;
 }
 </style>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="meun">
     <header>
       <van-nav-bar
         :border="false"
@@ -7,7 +7,6 @@
         @click-left="onClickLeft"
         left-arrow
       />
-      <div class="bj"></div>
     </header>
     <main class="section">
       <div class="title">提案标题</div>
@@ -46,32 +45,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.meun {
+  background: #f3f4f5;
+  height: 100vh;
+}
 .van-nav-bar {
   .van-icon {
     color: #000;
   }
+  .van-nav-bar__title {
+    color: #000;
+  }
 }
-.bj {
-  background: #f3f4f5;
-  height: 10pt;
-}
+
 .section {
-  margin: 0 16px;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  height: 100vh;
   .title {
-    margin: 20px 0 0;
+    color: #000;
+    margin: 1rem 0;
   }
   .van-field {
     background: #f3f4f5;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 1rem;
+    margin-top: 1rem;
   }
 }
 .van-button {
   background: #fc7542;
-  width: 345px;
-  margin-left: 20px;
+  width: 22rem;
+  margin-left: 1.2rem;
   position: fixed;
-  bottom: 30px;
-  border-radius: 25px;
+  bottom: 2rem;
+  border-radius: 2rem;
 }
 </style>

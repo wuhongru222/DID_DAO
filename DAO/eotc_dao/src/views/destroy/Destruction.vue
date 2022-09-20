@@ -82,46 +82,45 @@ export default {
 }
 .van-nav-bar {
   .van-nav-bar__title {
-    font-size: 24px;
-    font-weight: bold;
+    color: #000;
   }
   .van-icon {
     color: #000;
   }
 }
 .van-cell-group {
-  margin-top: 15px;
+  margin-top: 1rem;
   .van-cell:first-child {
-    line-height: 25px;
-    margin-bottom: 10px;
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
   }
   .van-cell {
-    line-height: 8px;
+    line-height: 0.5rem;
   }
   .van-cell:last-child {
     color: #237ff8;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
   }
 }
 .van-popup {
-  height: 100px;
-  padding: 15px;
-  margin-top: 15px;
+  height: 20rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 .van-tag {
-  padding: 10px 23px;
-  margin: 10px 8px 0;
+  padding: 0.5rem 1.3rem;
+  margin: 1rem 0.6rem 0;
 }
 .btn {
   position: fixed;
-  bottom: 20px;
+  bottom: 1rem;
   .van-button:first-child {
-    width: 100px;
-    margin-left: 10px;
-    margin-right: 20px;
+    width: 6rem;
+    margin-left: 1rem;
+    margin-right: 1.2rem;
   }
   .van-button:last-child {
-    width: 140px;
+    width: 8.5rem;
   }
 }
 </style>

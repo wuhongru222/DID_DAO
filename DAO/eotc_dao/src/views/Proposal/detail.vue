@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="meun">
     <header>
       <van-nav-bar
         @click-left="onClickLeft"
@@ -7,9 +7,8 @@
         title="详情"
         left-arrow
       />
-      <div class="bj"></div>
     </header>
-    <main>
+    <main class="box">
       <div class="one_an">
         <div>将提案提交门槛降低至 5 万</div>
         <div class="piao">
@@ -84,89 +83,99 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.meun {
+  background: #f3f4f5;
+  height: 100vh;
+}
 .van-nav-bar {
   .van-icon {
     color: #000;
   }
+  .van-nav-bar__title {
+    color: #000;
+  }
 }
-.bj {
-  background: #f3f4f5;
-  height: 10pt;
+.box {
+  background: #fff;
+  height: 100vh;
 }
 .one_an {
-  margin: 16px;
-  line-height: 25pt;
-  font-size: 16px;
+  margin: 1rem;
+  padding: 1rem 0 0;
+  line-height: 2rem;
+  font-size: 1rem;
   .piao {
     display: flex;
     color: #9296a2;
-    font-size: 14px;
+    font-size: 1rem;
     justify-content: space-between;
     .ion {
       display: inline-block;
-      width: 7pt;
-      height: 7pt;
+      width: 0.5rem;
+      height: 0.5rem;
       border-radius: 50%;
       background: #237ff8;
     }
   }
 }
 .jindu {
-  width: 335px;
+  width: 20.5rem;
   height: 205px;
   background: #f3f4f5;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   margin: 0 auto;
-  padding: 15px;
-
+  padding: 1rem;
+  color: #000;
   .hui {
     color: #999999;
-    font-size: 14px;
+    font-size: 0.5rem;
   }
   .van-progress {
-    margin: 10px 0;
+    margin: 1rem 0;
   }
   .num {
     font-size: 20pt;
     color: #878888;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 .tou {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #cccccc;
-  padding-bottom: 12px;
-  margin-bottom: 10px;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .xiang {
-  width: 335px;
+  color: #000;
+  width: 20.5rem;
   background: #f3f4f5;
-  border-radius: 10px;
-  margin: 15px auto 0;
-  line-height: 30px;
-  padding: 15px;
+  border-radius: 0.5rem;
+  margin: 1rem auto 0;
+  line-height: 2rem;
+  padding: 1rem;
   .wen {
     color: #666666;
   }
 }
 .ti {
-  width: 335px;
+  color: #000;
+  width: 20.5rem;
   background: #f3f4f5;
-  border-radius: 10px;
-  margin: 15px auto 20px;
-  padding: 15px;
+  border-radius: 0.5rem;
+  margin: 1rem auto 1rem;
+  padding: 1rem;
   .van-button {
-    width: 80px;
-    padding: 3px 15px;
-    border-radius: 5px;
+    width: 5rem;
+    padding: 0.3rem 1.5rem;
+    border-radius: 0.5rem;
     position: relative;
-    top: -5px;
+    top: -0.5rem;
   }
   .van-radio-group {
     .van-radio {
-      margin: 20px 0 5px;
+      margin: 1rem 0 0.1rem;
     }
   }
 }
