@@ -10,7 +10,7 @@ const routes = [
   //   component: Home,
   // },
   {
-    path: "/home",
+    path: "/",
     name: "home",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -19,8 +19,8 @@ const routes = [
       import(/* webpackChunkName: "about" */ "@/views/HOME/home"),
   },
   {
-    path: "/",
-    name: "proposal",
+    path: "/Bill_list",
+    name: "Bill_list",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -29,7 +29,7 @@ const routes = [
   },
   {
     path: "/Create",
-    name: "proposal",
+    name: "Create",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -38,7 +38,7 @@ const routes = [
   },
   {
     path: "/detail",
-    name: "proposal",
+    name: "detail",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -47,7 +47,7 @@ const routes = [
   },
   {
     path: "/pending",
-    name: "proposal",
+    name: "pending",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -56,7 +56,7 @@ const routes = [
   },
   {
     path: "/order_details",
-    name: "proposal",
+    name: "order_details",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -67,7 +67,7 @@ const routes = [
   },
   {
     path: "/Destruction",
-    name: "proposal",
+    name: "Destruction",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

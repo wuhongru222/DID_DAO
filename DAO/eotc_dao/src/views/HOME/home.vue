@@ -44,7 +44,7 @@
           <van-row>
             <van-col span="19"><span>最新提案</span></van-col>
             <van-col @click="newgengduo" span="5"
-              ><span>查看更多 ></span></van-col
+              ><span @click="me">查看更多 ></span></van-col
             >
           </van-row>
         </div>
@@ -53,20 +53,21 @@
           <p class="pp1">{{ dibu2 }}</p>
         </div>
       </van-col>
-      <van-col span="2" class="foot"> 
-       <van-row style="width:100%;height: 100%;">
-        <van-col span="15" class="span22">
-          <van-icon name="chat-o" color="#ee0a24" />
-          <span  style="font-size: 0.14em; ">2022年EOTC版权所有。</span>
-        </van-col>
-        <van-col span="9" class="dropdown">
-          <van-dropdown-menu direction="up">
-  <van-dropdown-item v-model="value1" :options="option1" />
-
-</van-dropdown-menu>
-        </van-col>
-
-       </van-row>
+      <van-col span="2" class="foot">
+        <van-row style="width: 100%; height: 100%">
+          <van-col span="15" class="span22">
+            <!-- <van-icon name="chat-o" color="#ee0a24" /> -->
+            <span>&copy;</span>
+            <span style="font-size: 0.14em; margin-left: 0.2rem"
+              >2022年EOTC版权所有。</span
+            >
+          </van-col>
+          <van-col span="9" class="dropdown">
+            <van-dropdown-menu direction="up">
+              <van-dropdown-item v-model="value1" :options="option1" />
+            </van-dropdown-menu>
+          </van-col>
+        </van-row>
       </van-col>
     </van-row>
   </div>
@@ -84,11 +85,11 @@ export default {
       daojn: "EOTC DAO",
       dao1: "围绕EOTC所有去中去化业务建立的团队 允许任何成员做出决定，参加治理",
       dibu2: "提交提案最低门槛为持有10000EOTC",
-      value1:0,
+      value1: 0,
       option1: [
-        { text: '中文', value: 0 },
-        { text: '英文', value: 1 },
-        { text: '日语', value: 2 },
+        { text: "中文", value: 0 },
+        { text: "英文", value: 1 },
+        { text: "日语", value: 2 },
       ],
     };
   },
@@ -102,6 +103,9 @@ export default {
     },
     newgengduo() {
       console.log("查看更多");
+    },
+    me() {
+      this.$router.push("/Bill_list");
     },
   },
 };
@@ -117,6 +121,7 @@ export default {
 }
 .header {
   width: 100%;
+  padding: 1rem 1rem 0 1rem;
 }
 .vancol2 {
   text-align: center;
