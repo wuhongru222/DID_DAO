@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <header>
-      <van-nav-bar title="工单系统" left-arrow />
+      <white :title="title"></white>
     </header>
     <main>
       <van-tabs v-model="activeName">
@@ -103,9 +103,12 @@
 </template>
 
 <script>
+import white from "../../components/Nav/white.vue";
 export default {
+  components: { white },
   data() {
     return {
+      title: "工单系统",
       activeName: "a",
     };
   },
@@ -122,11 +125,7 @@ export default {
   background: #f3f4f5;
   height: 100vh;
 }
-.van-nav-bar {
-  .van-icon {
-    color: #000;
-  }
-}
+
 .van-tabs {
   :deep .van-tabs__nav {
     .van-tabs__line {

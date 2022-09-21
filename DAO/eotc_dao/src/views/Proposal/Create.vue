@@ -1,12 +1,7 @@
 <template>
   <div class="meun">
     <header>
-      <van-nav-bar
-        :border="false"
-        title="创建提案"
-        @click-left="onClickLeft"
-        left-arrow
-      />
+      <white :title="title"></white>
     </header>
     <main class="section">
       <div class="title">提案标题</div>
@@ -29,9 +24,12 @@
 </template>
 
 <script>
+import white from "@/components/Nav/white.vue";
 export default {
+  components: { white },
   data() {
     return {
+      title: "创建提案",
       value: "",
       message: "",
     };

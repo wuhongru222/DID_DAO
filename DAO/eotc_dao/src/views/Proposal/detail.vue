@@ -1,12 +1,7 @@
 <template>
   <div class="meun">
     <header>
-      <van-nav-bar
-        @click-left="onClickLeft"
-        :border="false"
-        title="详情"
-        left-arrow
-      />
+      <white :title="title"></white>
     </header>
     <main class="box">
       <div class="one_an">
@@ -63,9 +58,12 @@
 </template>
 
 <script>
+import white from "@/components/Nav/white.vue";
 export default {
+  components: { white },
   data() {
     return {
+      title: "详情",
       radio: "",
     };
   },

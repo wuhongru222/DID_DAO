@@ -1,12 +1,7 @@
 <template>
   <div class="order">
     <header>
-      <van-nav-bar
-        @click-left="onClickLeft"
-        :border="false"
-        title="工单详情"
-        left-arrow
-      />
+      <white :title="title"></white>
     </header>
     <main>
       <van-cell-group inset>
@@ -43,9 +38,13 @@
 </template>
 
 <script>
+import white from "../../components/Nav/white.vue";
 export default {
+  components: { white },
   data() {
-    return {};
+    return {
+      title: "工单详情",
+    };
   },
   methods: {
     onClickLeft() {
@@ -60,11 +59,7 @@ export default {
   background: #f3f4f5;
   height: 100vh;
 }
-.van-nav-bar {
-  .van-icon {
-    color: #000;
-  }
-}
+
 .van-cell-group {
   margin-top: 15px;
   color: #999;

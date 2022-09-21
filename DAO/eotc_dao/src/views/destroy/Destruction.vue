@@ -1,7 +1,7 @@
 <template>
   <div class="dest">
     <header>
-      <van-nav-bar :border="false" title="销毁查询" left-arrow />
+      <white :title="title"></white>
     </header>
     <main>
       <van-search
@@ -60,9 +60,12 @@
 </template>
 
 <script>
+import white from "../../components/Nav/white.vue";
 export default {
+  components: { white },
   data() {
     return {
+      title: "销毁查询",
       value: "",
       show: false,
     };

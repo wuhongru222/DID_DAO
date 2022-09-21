@@ -1,7 +1,7 @@
 <template>
   <div class="meun">
     <header class="me">
-      <van-nav-bar :border="false" title="我的提案" left-arrow />
+      <white :title="title"></white>
       <div class="box">
         <div class="one_an" @click="detail">
           <div>将UNI提案提交门槛降低至2万</div>
@@ -55,10 +55,15 @@
 </template>
 
 <script>
+import white from "@/components/Nav/white.vue";
+
 export default {
+  components: { white },
   name: "home",
   data() {
-    return {};
+    return {
+      title: "我的提案",
+    };
   },
   methods: {
     createAn() {
