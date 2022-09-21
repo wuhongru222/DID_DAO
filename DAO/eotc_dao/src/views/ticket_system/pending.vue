@@ -138,37 +138,37 @@ export default {
   }
 }
 .tag {
-  margin-top: 15px;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-around;
   .van-tag {
     display: inline-block;
-    padding: 7px 30px;
+    padding: 0.4rem 1.5rem;
   }
 }
 .van-cell-group {
-  margin-top: 15px;
+  margin-top: 1rem;
   .van-cell:first-child {
-    line-height: 35px;
-    margin-bottom: 10px;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
   }
   .van-cell {
-    line-height: 10px;
+    line-height: 0.7rem;
   }
   .dai {
     float: right;
-    margin: 10px 15px 15px 0;
-    padding: 0 20px;
+    margin: 0.5rem 0.7rem 0.9rem 0;
+    padding: 0 1.4rem;
   }
 }
 .chu {
   .btn {
-    margin: 15px 0 20px;
+    margin: 1rem 0 1rem;
     display: flex;
     justify-content: space-around;
     .van-button {
       font-size: 14px;
-      padding: 5px 41px;
+      padding: 0.2rem 2.3rem;
     }
   }
   .red {

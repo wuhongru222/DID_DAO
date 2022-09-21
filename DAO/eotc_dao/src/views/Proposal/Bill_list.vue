@@ -2,6 +2,8 @@
   <div class="meun">
     <header class="me">
       <white :title="title"></white>
+    </header>
+    <main>
       <div class="box">
         <div class="one_an" @click="detail">
           <div>将UNI提案提交门槛降低至2万</div>
@@ -44,8 +46,7 @@
           </div>
         </div>
       </div>
-    </header>
-    <main></main>
+    </main>
     <footer>
       <van-button icon="plus" block type="info" @click="createAn"
         >创建提案</van-button
@@ -56,7 +57,6 @@
 
 <script>
 import white from "@/components/Nav/white.vue";
-
 export default {
   components: { white },
   name: "home",
@@ -65,6 +65,7 @@ export default {
       title: "我的提案",
     };
   },
+  async created() {},
   methods: {
     createAn() {
       this.$router.push("/Create");
@@ -76,25 +77,27 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.me {
-  background: #f3f4f5;
+.meun {
   height: 100vh;
+  background: #f3f4f5;
+  margin-bottom: 1rem;
+  position: relative;
 }
 .box {
   background: #fff;
-  border-radius: 0.5rem;
   height: 100vh;
+  border-radius: 0.5rem;
 }
 .one_an {
   color: #000;
   margin: 1rem;
   border-bottom: 1px solid #eeeeee;
   line-height: 2rem;
-  font-size: 1rem;
+  font-size: 16px;
   .piao {
     display: flex;
-    /* color: #9296a2; */
-    font-size: 0.8rem;
+    color: #9296a2;
+    font-size: 12.8px;
     justify-content: space-between;
     .ion {
       display: inline-block;
@@ -114,9 +117,11 @@ export default {
 }
 .van-button {
   width: 22rem;
-  position: fixed;
-  margin-left: 1.1rem;
-  bottom: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
   border-radius: 10rem;
 }
 </style>

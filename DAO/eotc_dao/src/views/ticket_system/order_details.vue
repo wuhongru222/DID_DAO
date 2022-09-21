@@ -56,14 +56,15 @@ export default {
 
 <style lang="scss" scoped>
 .order {
+  position: relative;
   background: #f3f4f5;
   height: 100vh;
 }
 
 .van-cell-group {
-  margin-top: 15px;
+  margin-top: 1rem;
   color: #999;
-  padding: 10px 5px;
+  padding: 0.8rem 0.2rem;
   .van-cell {
     font-size: 16px;
   }
@@ -74,19 +75,21 @@ export default {
 .group {
   .van-cell {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 0.8rem;
   }
 }
 .tu {
   .van-image {
-    margin: 0 5px;
+    margin: 0 0.4rem;
   }
 }
 .van-button {
-  width: 90%;
-  margin: 0 20px;
-
-  position: fixed;
+  width: 22rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
   bottom: 20px;
 }
 </style>

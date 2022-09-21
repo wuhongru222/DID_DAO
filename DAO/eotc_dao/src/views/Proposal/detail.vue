@@ -89,16 +89,17 @@ export default {
 .box {
   background: #fff;
   height: 100vh;
+  color: #000;
 }
 .one_an {
   margin: 1rem;
   padding: 1rem 0 0;
   line-height: 2rem;
-  font-size: 1rem;
+  font-size: 16px;
   .piao {
     display: flex;
     color: #9296a2;
-    font-size: 1rem;
+    font-size: 16px;
     justify-content: space-between;
     .ion {
       display: inline-block;
@@ -119,13 +120,13 @@ export default {
   color: #000;
   .hui {
     color: #999999;
-    font-size: 0.5rem;
+    font-size: 8px;
   }
   .van-progress {
     margin: 1rem 0;
   }
   .num {
-    font-size: 20pt;
+    font-size: 20px;
     color: #878888;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -135,7 +136,7 @@ export default {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #cccccc;
-  padding-bottom: 1rem;
+  padding-bottom: 1.1rem;
   margin-bottom: 1rem;
 }
 .xiang {

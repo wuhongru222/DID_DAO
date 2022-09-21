@@ -44,15 +44,16 @@ export default {
 
 <style lang="scss" scoped>
 .meun {
+  position: relative;
   background: #f3f4f5;
   height: 100vh;
 }
 
 .section {
+  height: 100vh;
   margin-top: 1rem;
   padding: 1rem;
   background: #fff;
-  height: 100vh;
   .title {
     color: #000;
     margin: 1rem 0;
@@ -66,9 +67,11 @@ export default {
 .van-button {
   background: #fc7542;
   width: 22rem;
-  margin-left: 1.2rem;
-  position: fixed;
-  bottom: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
   border-radius: 2rem;
 }
 </style>
