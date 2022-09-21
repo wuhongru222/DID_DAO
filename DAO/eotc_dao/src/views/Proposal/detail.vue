@@ -85,14 +85,7 @@ export default {
   background: #f3f4f5;
   height: 100vh;
 }
-.van-nav-bar {
-  .van-icon {
-    color: #000;
-  }
-  .van-nav-bar__title {
-    color: #000;
-  }
-}
+
 .box {
   background: #fff;
   height: 100vh;

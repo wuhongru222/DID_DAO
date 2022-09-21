@@ -76,14 +76,6 @@ export default {
 };
 </script>
 <style lang="scss" scope>
-.van-nav-bar {
-  .van-icon {
-    color: #000;
-  }
-  .van-nav-bar__title {
-    color: #000;
-  }
-}
 .me {
   background: #f3f4f5;
   height: 100vh;

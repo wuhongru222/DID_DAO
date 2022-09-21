@@ -158,7 +158,11 @@ html {
 }
 
 .van-ellipsis {
-  color: white;
+  color: #000;
+}
+
+.van-nav-bar .van-icon {
+  color: #000;
 }
 
 .van-dropdown-menu__item {

@@ -27,11 +27,13 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-::deep.van-nav-bar .van-icon
-  color: #000
+<style lang="scss" scoped>
+.van-nav-bar .van-icon {
+  color: #000;
+}
 
-::deep.van-nav-bar__title
-  font-size: 36px
-  font-weight: bold
+::deep.van-nav-bar__title {
+  font-size: 36px;
+  font-weight: bold;
+}
 </style>>

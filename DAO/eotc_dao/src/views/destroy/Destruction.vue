@@ -60,9 +60,9 @@
 </template>
 
 <script>
-import white from "../../components/Nav/white.vue";
+import White from "../../components/Nav/white.vue";
 export default {
-  components: { white },
+  components: { White },
   data() {
     return {
       title: "销毁查询",
@@ -83,14 +83,7 @@ export default {
   background: #f3f4f5;
   height: 100vh;
 }
-.van-nav-bar {
-  .van-nav-bar__title {
-    color: #000;
-  }
-  .van-icon {
-    color: #000;
-  }
-}
+
 .van-cell-group {
   margin-top: 1rem;
   .van-cell:first-child {
