@@ -7,7 +7,7 @@
       :style="{ height: '100%', width: '90%' }"
     >
       <ul class="uls1">
-        <li v-for="item in etot" :key="item.index">
+        <li v-for="item in etot" :key="item.index" @click="DaoClick">
           {{ item.vaule }} <van-icon name="guide-o" />
         </li>
       </ul>
@@ -16,9 +16,9 @@
 </template>
 
 <script>
+import { loadweb3 } from "../../../utils/web3";
 export default {
   props: ["show"],
-
   data() {
     return {
       temp_app: false,
@@ -31,7 +31,7 @@ export default {
         { vaule: "国际化5" },
         { vaule: "国际化6" },
         { vaule: "国际化7" },
-        { vaule: "国际化8" },
+        { vaule: "DAO" },
         { vaule: "国际9" },
         { vaule: "国际化0" },
       ],
@@ -47,11 +47,13 @@ export default {
       deep: true,
     },
   },
-
-  //     deep:true,
-  //     immediate:true
-  //   },
+  mounted() {
+    loadweb3()
+  },
   methods: {
+    DaoClick(){
+
+    }
     // ww1(){
     //     this.shows=this.show
     // }

@@ -75,7 +75,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .me {
   background: #f3f4f5;
   height: 100vh;

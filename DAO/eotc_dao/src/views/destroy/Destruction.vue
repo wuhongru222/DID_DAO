@@ -45,15 +45,28 @@
           <van-tag round type="primary" color="#eee" text-color="#666666"
             >本月</van-tag
           >
-          <van-tag round type="primary" color="#eee" text-color="#666666"
+          <van-tag
+            round
+            type="primary"
+            color="#eee"
+            text-color="#666666"
+            @click="showDate = true"
             >自定义</van-tag
           >
         </div>
+
         <div class="btn">
           <van-button round type="default">重置</van-button>
           <van-button round type="info">确定</van-button>
         </div>
       </van-popup>
+      <van-calendar
+        title="日期选择"
+        v-model="showDate"
+        :show-subtitle="true"
+        type="multiple"
+        @confirm="onConfirm"
+      />
     </main>
     <footer></footer>
   </div>
@@ -68,11 +81,16 @@ export default {
       title: "销毁查询",
       value: "",
       show: false,
+      showDate: false,
     };
   },
   methods: {
     showPopup() {
       this.show = true;
+    },
+    onConfirm(date) {
+      this.show = false;
+      this.text = `选择了 ${date.length} 个日期`;
     },
   },
 };
