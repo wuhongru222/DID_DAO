@@ -10,7 +10,7 @@
             ><img src="./assets/image/eotc.png" alt=""
           /></van-col>
           <van-col span="2"
-            ><van-icon name="manager-o" color="white"
+            ><van-icon @click="personage" name="manager-o" color="white"
           /></van-col>
         </van-row>
       </van-col>
@@ -103,6 +103,9 @@ export default {
     },
     newgengduo() {
       console.log("查看更多");
+    },
+    personage() {
+      this.$router.push("/personage");
     },
     me() {
       this.$router.push("/Bill_list");

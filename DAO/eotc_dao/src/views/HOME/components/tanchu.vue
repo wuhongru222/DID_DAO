@@ -48,12 +48,10 @@ export default {
     },
   },
   mounted() {
-    loadweb3()
+    loadweb3();
   },
   methods: {
-    DaoClick(){
-
-    }
+    DaoClick() {},
     // ww1(){
     //     this.shows=this.show
     // }

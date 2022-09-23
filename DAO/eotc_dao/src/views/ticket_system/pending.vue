@@ -6,7 +6,7 @@
     <main>
       <van-tabs v-model="activeName">
         <!-- 待处理 -->
-        <van-tab title="待处理" name="a">
+        <van-tab title="待处理" :name="0">
           <div class="tag">
             <van-tag round plain type="primary">全部</van-tag>
             <van-tag round type="primary" color="#fff" text-color="#000"
@@ -50,7 +50,7 @@
           </van-cell-group>
         </van-tab>
         <!-- 处理中 -->
-        <van-tab title="处理中" name="b">
+        <van-tab title="处理中" :name="1">
           <van-cell-group class="chu" inset>
             <van-cell title="BUG反馈" value="2022-07-15 18:56:45" />
             <van-cell title="提交人:陈都(458956)" :border="false" />
@@ -85,7 +85,7 @@
           </van-cell-group>
         </van-tab>
         <!-- 已处理 -->
-        <van-tab title="已处理" name="c">
+        <van-tab title="已处理" :name="2">
           <van-cell-group class="finish" inset>
             <van-cell title="BUG反馈" value="2022-07-15 18:56:45" />
             <van-cell title="提交人:陈都(458956)" :border="false" />
@@ -104,13 +104,26 @@
 
 <script>
 import white from "../../components/Nav/white.vue";
+import { getworkorderlist } from "@/api/workOrder";
 export default {
   components: { white },
   data() {
     return {
       title: "工单系统",
-      activeName: "a",
+      activeName: 0,
+      page: 1,
+      itemsPerPage: 10,
     };
+  },
+  created() {
+    let type = this.activeName;
+    getworkorderlist({
+      type: type,
+      page: this.page,
+      itemsPerPage: this.itemsPerPage,
+    }).then((res) => {
+      console.log(res);
+    });
   },
   methods: {
     chuli() {

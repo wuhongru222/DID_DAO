@@ -16,8 +16,11 @@
       />
     </main>
     <footer>
-      <van-button block type="warning"
+      <!-- <van-button block type="warning"
         >您必须持有10000EOTC才能提交提案</van-button
+      > -->
+      <van-button class="but" block type="warning" @click="submit()"
+        >提交提案</van-button
       >
     </footer>
   </div>
@@ -25,6 +28,8 @@
 
 <script>
 import white from "@/components/Nav/white.vue";
+import { putproposal } from "@/api/Proposal";
+import { Toast } from "vant";
 export default {
   components: { white },
   data() {
@@ -37,6 +42,24 @@ export default {
   methods: {
     onClickLeft() {
       history.go(-1);
+    },
+    submit() {
+      let walletAddress = localStorage.getItem("myaddress");
+      let otype = localStorage.getItem("netType");
+      let sign = localStorage.getItem("mysign");
+      putproposal({
+        walletAddress: walletAddress,
+        otype: otype,
+        sign: sign,
+        title: this.value,
+        summary: this.message,
+      }).then((res) => {
+        console.log(res);
+        if (res.status == 200) {
+          Toast.success("提交成功");
+          this.$router.push("/Bill_list");
+        }
+      });
     },
   },
 };
@@ -73,5 +96,9 @@ export default {
   left: 0;
   margin: 0 auto;
   border-radius: 2rem;
+  border: none;
+}
+.van-button:last-child {
+  background: #237ff8;
 }
 </style>

@@ -5,43 +5,30 @@
     </header>
     <main>
       <div class="box">
-        <div class="one_an" @click="detail">
-          <div>将UNI提案提交门槛降低至2万</div>
+        <div
+          class="one_an"
+          @click="detail(item.proposalId)"
+          v-for="(item, index) in List"
+          :key="index"
+        >
+          <div>{{ item.title }}</div>
           <div class="piao">
-            <span>1000票</span
-            ><span
+            <span>{{ item.total }}票</span>
+            <span v-if="item.state == 0"
               ><div class="ion"></div>
               未通过</span
             >
-          </div>
-        </div>
-        <div class="one_an">
-          <div>创建一个NFT农场-抵押UNI并赚取NFT</div>
-          <div class="piao">
-            <span>10票</span
-            ><span
-              ><div class="ion1"></div>
+            <span v-if="item.state == 1"
+              ><div class="ion two"></div>
               已通过</span
             >
-          </div>
-        </div>
-        <div class="one_an">
-          <div>帮助支持GNSH项目</div>
-          <div class="piao">
-            <span>10票</span
-            ><span
-              ><div class="ion"></div>
-              未通过</span
+            <span v-if="item.state == 2"
+              ><div class="ion three"></div>
+              进行中</span
             >
-          </div>
-        </div>
-        <div class="one_an">
-          <div>帮助支持GNSH项目</div>
-          <div class="piao">
-            <span>10票</span
-            ><span
-              ><div class="ion1"></div>
-              已通过</span
+            <span v-if="item.state == 3"
+              ><div class="ion fhire"></div>
+              已终止</span
             >
           </div>
         </div>
@@ -57,21 +44,33 @@
 
 <script>
 import white from "@/components/Nav/white.vue";
+import { getmyprops } from "@/api/Proposal";
 export default {
   components: { white },
   name: "home",
   data() {
     return {
       title: "我的提案",
+      query: {
+        walletAddress: localStorage.getItem("myaddress"),
+        otype: localStorage.getItem("netType"),
+        sign: localStorage.getItem("mysign"),
+      },
+      List: [],
     };
   },
-  async created() {},
+  created() {
+    getmyprops(this.query).then((res) => {
+      this.List = res.data.items;
+      console.log(this.List);
+    });
+  },
   methods: {
     createAn() {
       this.$router.push("/Create");
     },
-    detail() {
-      this.$router.push("/detail");
+    detail(id) {
+      this.$router.push({ path: "/detail", query: { proposalId: id } });
     },
   },
 };
@@ -106,12 +105,14 @@ export default {
       border-radius: 50%;
       background: #fc7542;
     }
-    .ion1 {
-      display: inline-block;
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 50%;
+    .two {
       background: #00b87a;
+    }
+    .three {
+      background: #237ff8;
+    }
+    .fhire {
+      background: #999999;
     }
   }
 }

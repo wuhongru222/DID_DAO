@@ -5,7 +5,7 @@
     </header>
     <main class="box">
       <div class="one_an">
-        <div>将提案提交门槛降低至 5 万</div>
+        <div>{{ List.title }}</div>
         <div class="piao">
           <span
             ><div class="ion"></div>
@@ -59,13 +59,32 @@
 
 <script>
 import white from "@/components/Nav/white.vue";
+import { getproposal } from "@/api/Proposal";
 export default {
   components: { white },
   data() {
     return {
       title: "详情",
       radio: "",
+      proposalId: this.$route.query.proposalId,
+      List: {},
     };
+  },
+  created() {
+    let walletAddress = localStorage.getItem("myaddress");
+    let otype = localStorage.getItem("netType");
+    let sign = localStorage.getItem("mysign");
+    getproposal(
+      {
+        walletAddress: walletAddress,
+        otype: otype,
+        sign: sign,
+      },
+      this.proposalId
+    ).then((res) => {
+      this.List = res.data.items;
+      console.log(this.List);
+    });
   },
   watch: {
     radio: function (val) {
